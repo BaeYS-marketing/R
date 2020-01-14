@@ -1,0 +1,78 @@
+1. t분포
+# audi와 hyundai의 cty 비교
+mpg2 = mpg %>% filter(manufacturer %in% c("audi", "hyundai"))
+t.test(cty~manufacturer, data=mpg2, var.equal=F)
+# p-value= 0.1033이므로 audi와 hyundai가 갖는 cty 차이는 우연이다. audi냐 hyundai냐에 따라서 cty 차이가 나지 않는다.
+var.test(cty~manufacturer, data=mpg2) # p-value가 0.05보다 크면 차이가 없으므로 var.equal=T를 써야하고, 작으면 안 써도 된다.
+
+# chevrolet 와 nissan의 cty 비교
+mpg3 = mpg %>% filter(manufacturer %in% c("chevrolet", "nissan"))
+t.test(cty~manufacturer, data=mpg3)
+# p-value= 0.01445이므로 chevrolet와 nissan이 갖는 cty 차이는 우연이 아니다. chevrolet냐 nissan이냐에 따라 cty가 차이난다.
+
+# compact와 suv의 cty 비교
+mpg4 = mpg %>% filter(class %in% c("compact", "suv"))
+t.test(cty~class,data=mpg4)
+# p-value가 0.05보다 작으므로 class가 compact냐 suv냐에 따라서 cty가 차이난다.
+
+
+
+2. 카이제곱분포
+chisq.ex1
+View(mpg)
+fuel <- mpg 
+head(fuel)
+fuel <- fuel[c(1,8,9)]
+fuel_sum <- fuel %>%
+  filter(manufacturer %in% c("audi","ford")) %>% 
+  mutate(cty16 = ifelse(cty >= 16, T, F)) %>% 
+  mutate(hwy23 = ifelse(hwy >= 23, T, F))
+
+a <- table(fuel_sum$manufacturer, fuel_sum$cty16)
+b <- table(fuel_sum$manufacturer, fuel_sum$hwy23)
+colnames(a) <- c("16down", "16up")
+colnames(b) <- c("23down", "23up")
+c <- cbind(a, b)
+
+chisq.test(c)
+chisq.ex2
+
+install.packages("vcd")
+library(vcd)
+attach(Arthritis)
+d <- table(Treatment, Improved)
+chisq.test(d)
+
+chisq.ex3
+View(iris)
+t <- iris %>% mutate(PW = ifelse(Petal.Width < 0.6, "A", ifelse(Petal.Width >= 1.8, "C", "B")))
+u <- table(t$Species, t$PW)
+chisq.test(u)
+
+
+
+3. f분포
+ggplot2::mpg 데이터
+### audi, chevrolet, ford의 hwy - f검정 ###
+audi, chevrolet, ford 세 회사의 고속도로 연비의 차이가 유의미한지 보려했다.
+
+ff1 = mpg %>%
+  filter(manufacturer %in% c('audi', 'chevrolet', 'ford'))
+fa1 = aov(hwy ~ manufacturer, data = ff1)
+summary(fa1)
+
+F value : 19.08
+Pr(>F) : 4.07e-07
+
+P값이 0.05보다 작으므로 고속도로 연비의 차이가 유의미하다.
+
+## 나머지 f검정
+
+fa2 = aov(hwy ~ drv, data = mpg)
+summary(fa2)
+
+ff3 = mpg %>%
+  filter(class %in% c('midsize', 'minivan', 'pickup'))
+fa3 = aov(hwy ~ class, data = ff3)
+summary(fa3)
+

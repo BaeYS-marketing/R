@@ -1,0 +1,6 @@
+# 문제 14
+empnew %>% mutate(enamelength= nchar(ename))%>%
+  arrange(enamelength) 
+
+
+Error in nchar(ename) : 'nchar()' requires a character vector 
