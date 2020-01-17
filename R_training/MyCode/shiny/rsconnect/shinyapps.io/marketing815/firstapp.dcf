@@ -1,0 +1,12 @@
+name: firstapp
+title: firstapp
+username:
+account: marketing815
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1452478
+bundleId: 2579434
+url: https://marketing815.shinyapps.io/firstapp/
+when: 1573457745.48064
+asMultiple: FALSE
+asStatic: FALSE

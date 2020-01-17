@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573461228120.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3918884048",
+    "id" : "E4E32E33",
+    "lastKnownWriteTime" : 1573461598,
+    "last_content_update" : 1573461598403,
+    "path" : "C:/Rstudy/app/app3/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "cursorPosition" : "11,26",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

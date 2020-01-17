@@ -1,0 +1,79 @@
+<!-- 
+싱글태그 , 더블태그 
+엠티태그 
+
+name = 'query'
+name =   사이트마다 추출하는 이름방식이 다르다. 여기는 쿼리문자열
+
+URL: uniform Resource Locator 위치를 알려주는 단일화된 자원
+
+우리가 흔히 알고있는 URL은 그중 하나로 HTTP URL 이다.
+
+https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch
+
+&query=%EA%B0%80%EB%82%98%EB%8B%A4&oquery=%EA%B0%80%EB%82%98%EB%8B%A4&tqi=UkjbSlprvhGssddh55Vssssss5C-406534
+
+&query ~~~ : 쿼리 문자열  / 숫자 영어는 그대로, 한글은 %다음 변환 3바이트(UTF-8)
+
+웹서버에 무엇인가를 요청하면 같이 전달되는 문자열을 쿼리 문자열이라고 함.
+EX. 웹에서 입력한 계정, 패스워드
+
+##서버한테 쿼리를 전달하면서 요청하는 방식 2가지 있다.
+: 웹 클라이언트(브라우저)[요청]에서 웹 서버[서비스]에게 무엇인가를요청할 때 함께 전달하는 name과 value로 구성된 문자열을 Query문자열이라고 한다. 이때 Query 문자열을 서버에게 전달하는 방식은 2가지가 있다. 
+
+1.get
+: 요청 문자열 뒤에 [ ? ]기호 뒤에 추가하여 전달
+
+2.post
+: 요청 바디 안에 들어rㅏ며 외부에 공개되지 않는다. ~로그인,결제 등등
+-->
+
+
+<!DOCTYPE html>           
+<html>
+        
+<head>
+        <meta charset="utf-8">            
+        <title>맛보기 HTML</title>
+                                
+
+</head>
+<body>  
+
+        <h3>POST 태그방식</h3>
+        <form method='post' action='http://unico2013.dothome.co.kr/crawling/post.php'>
+                이름 : <input type ='text' name = 'name'> <br>
+                나이 : <input type ='number' name = 'age'> <br>
+                <input type = 'submit' value='Query전달(GET)'>
+        </form>
+
+
+
+        <h1>폼 태그 학습</h1>
+        <form method='get' action='http://unico2013.dothome.co.kr/crawling/get.php'>
+                이름 : <input type ='text' name = 'name'> <br>
+                나이 : <input type ='number' name = 'age'> <br>
+                <input type = 'submit' value='Query전달(GET)'>
+        </form>
+        <hr>
+        <h2> 네이버 검색 </h2>
+        <form method='get' action='https://search.naver.com/search.naver'>
+                검색단어 : <input type = 'text' name = 'query'>
+                <input type = 'submit' value='검색'>
+        </form>
+        <hr>
+     
+         
+       
+                                 
+</body>
+</html>        
+
+
+
+
+<!-- 
+쿼리스트링은  사용자가  웹프로그램으로  입력  데이터를  전달하는  가장  단순하고  또한  널리  사용되는  방법 
+URL 주소와  쿼리스트링은  "?"로  구분되며  변수와  값의  쌍(변수=값)으로  구성된다. 만약  여러  쌍의  변수와  값을  전달할  경우  각각의  쌍을  " &"로  구분해주면  된다.
+-->
+                                           

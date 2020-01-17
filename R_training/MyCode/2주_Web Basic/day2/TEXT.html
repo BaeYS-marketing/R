@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = 'UTF-8'>
+    <title> 복습 중</title>
+    <style>
+      a {
+        color : red;
+        text-decoration : none;
+      }
+      a:hover {
+        font-weight : bold;
+                }
+      .target1 {
+        color : #ff33cc;
+      }
+      h3 > span { 
+        font-size : 3em;
+      }
+      .target2 {
+        color : green;
+        font-size : 2em;
+        background : yellow;
+      }
+      #totoro {
+        opacity : 0.5;
+      }
+                
+    </style>
+    
+  </head>
+    
+  
+  <body>
+    <h1> html 기초</h1>
+    <hr>
+    <h2 class = 'target1'> html을 학습합니다. </h2>
+    <h3> <span>Adsp</span>를 공부합니다.</h3>
+    <h4> R을 복습합니다. </h4>
+    <h5> 지금은 <span class = 'target2'> html </span> 공부 중입니다. </h5>
+    <h1> 다들 열심히 하고 있네요</h1>
+    
+    <br>
+    <h3>google URL 들어가기 </h3>
+    <a href = 'https://www.google.com'>
+      Visit www.google.com
+    </a><br>
+    <br>
+    
+    <div style = 'color : blue'> 지역속성-변수로 파란색 글자 출력 </div>
+    
+    <ol>
+      <li>이미지 넣기 </li>
+      <li> css 속성</li>
+      <li> 자바스크립트</li>
+    </ol>
+    
+    <ul>
+      <li> first </li>
+      <li> second </li>
+      <li> third</li>
+    </ul>
+    
+    <img src = "totoro.png" width =100>
+    <img id = 'totoro' src = 'totoro.png' width = 150>
+    <img src = 'totoro.png' width = 200>
+    
+    <br><br><br>
+    <hr>
+           <h2>POST 태그방식</h2>
+        <form method='post' action='http://unico2013.dothome.co.kr/crawling/post.php'>
+                이름 : <input type ='text' name = 'name'> <br>
+                나이 : <input type ='number' name = 'age'> <br>
+                <input type = 'submit' value='Query전달(GET)'>
+        </form>
+
+
+
+        <h2>폼 태그 학습</h2>
+        <form method='get' action='http://unico2013.dothome.co.kr/crawling/get.php'>
+                이름 : <input type ='text' name = 'name'> <br>
+                나이 : <input type ='number' name = 'age'> <br>
+                <input type = 'submit' value='Query전달'>
+        </form>
+        <hr>
+        <h2> 네이버 검색 </h2>
+        <form method='get' action='https://search.naver.com/search.naver'>
+                검색단어 : <input type = 'text' name = 'query'>
+                <input type = 'submit' value='검색'>
+        </form>
+        <hr><br>
+        <h1>시계 만들기</h1>
+        <h2>20시 52분 35초 생성 시작</h2>
+        <br>
+        <h5>실시간 시간 표시</h5>
+        
+       <script>                                         
+             var h1dom = document.getElementsByTagName('h5')[1];
+             var d = new Date()
+             h1dom.textContent = d.getHours()+'시'+
+                                 d.getMinutes() + '분'+
+                                 d.getSeconds()+ '초';
+       </script>
+
+    
+    <script>
+      var dom = document.getElementById('totoro');
+      dom.onclick = function() {
+        alert('두 번째 토토로를 클릭함!')
+      }
+    </script>
+    
+    
+    
+    
+  </body>
+</html>

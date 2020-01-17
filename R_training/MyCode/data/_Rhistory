@@ -1,0 +1,512 @@
+map1 <- map0 %>% addTiles()
+map1
+학원lonlat
+mk
+map2 <- leaflet() %>% setView(lng = mk$lon, lat = mk$lat, zoom = 16) %>% addTiles() %>% addCircles(lng = lan, lat = lat, color='green', popup = msg )
+source('C:/Rstudy/3주_dplyr 및 시각화/day4/5.day14_3.R', encoding = 'UTF-8', echo=TRUE)
+content1 <- paste(sep = '<br/>',"<b><a href='https://www.seoul.go.kr/main/index.jsp'>서울시청</a></b>",'아름다운 서울','박원순 시장님 화이팅!!')
+map3<-leaflet() %>% addTiles() %>%  addPopups(126.97797, 37.56654, content1, options = popupOptions() )
+map3
+content2 <- paste(sep = '<br/>',"<b><a href='http://www.snmb.mil.kr/mbshome/mbs/snmb/'>국립서울현충원</a></b>",'1955년에 개장', '2013년 ‘서울 미래유산’으로 등재')
+map3<-leaflet() %>% addTiles() %>%  addPopups(c(126.97797, 126.97797),  c(37.56654, 37.50124) , c(content1, content2), options = popupOptions(closeButton = FALSE) )
+map3
+map3<-leaflet() %>% addTiles() %>%  addPopups(c(126.97797, 126.97797),  c(37.56654, 37.50124) , c(content1, content2), options = popupOptions(closeButton = FALSE) )
+map3
+map2 <- leaflet() %>% setView(lng = mk$lon, lat = mk$lat, zoom = 16) %>% addTiles() %>% addCircles(lng = lan, lat = lat, color='green', popup = msg )
+map2
+map2 <- leaflet() %>% setView(lng = mk$lon, lat = mk$lat, zoom = 18) %>% addTiles() %>% addCircles(lng = lan, lat = lat, color='green', popup = msg )
+map2
+map2 <- leaflet() %>% setView(lng = mk$lon, lat = mk$lat, zoom = 5) %>% addTiles() %>% addCircles(lng = lan, lat = lat, color='green', popup = msg )
+map2
+map2 <- leaflet() %>% setView(lng = mk$lon, lat = mk$lat, zoom = 1) %>% addTiles() %>% addCircles(lng = lan, lat = lat, color='green', popup = msg )
+map2
+content1 <- paste(sep = '<br/>',"<b><a href='https://www.seoul.go.kr/main/index.jsp'>서울시청</a></b>",'아름다운 서울','박원순 시장님 화이팅!!')
+map3<-leaflet() %>% addTiles() %>%  addPopups(126.97797, 37.56654, content1, options = popupOptions() )
+map3
+content2 <- paste(sep = '<br/>',"<b><a href='http://www.snmb.mil.kr/mbshome/mbs/snmb/'>국립서울현충원</a></b>",'1955년에 개장', '2013년 ‘서울 미래유산’으로 등재')
+map3<-leaflet() %>% addTiles() %>%  addPopups(c(126.97797, 126.97797),  c(37.56654, 37.50124) , c(content1, content2), options = popupOptions(closeButton = FALSE) )
+map3
+getwd(0)
+getwd()
+wifi_data = read.csv('data/wifi_data.csv', encoding = 'utf-8', stringsAsFactors = FALSE)
+seoul_lonlat
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1],
+lat = seoul_lonlat[2],
+zoom = 11) %>%
+addTiles() %>%
+addCircles(lng = ~lon, lat = ~lat)
+View(wifi_data)
+leaflet(wifi_data) %>%                              # leaflet(wifi_data) : wifi_data를 데이터로 하겠어
+setView(lng = seoul_lonlat[1],
+lat = seoul_lonlat[2],
+zoom = 11) %>%
+addTiles() %>%
+addCircles(lng = ~lon, lat = ~lat)         # ~ : ~별 이라는 포뮬라 식을 함께 써줘야한다._ 안쓰면 Error
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1], lat = seoul_lonlat[2], zoom = 11) %>%
+addProviderTiles('Stamen.Toner') %>%               #addTiles() 업글레이드 버전  /  stamen이 제공하는 Toner 타일
+addCircles(lng = ~lon, lat = ~lat)
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1], lat = seoul_lonlat[2], zoom = 11) %>%
+addProviderTiles('CartoDB.Positron') %>%
+addCircles(lng = ~lon, lat = ~lat)
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1], lat = seoul_lonlat[2], zoom = 11) %>%
+addProviderTiles('Stamen.Toner') %>%
+addCircles(lng = ~lon, lat = ~lat, popup = ~div)
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1], lat = seoul_lonlat[2], zoom = 11) %>%
+addProviderTiles('CartoDB.Positron') %>%
+addCircles(lng = ~lon, lat = ~lat)
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1], lat = seoul_lonlat[2], zoom = 11) %>%
+addProviderTiles('Stamen.Toner') %>%
+addCircles(lng = ~lon, lat = ~lat, popup = ~div)
+telecom_color = colorFactor('Set1', wifi_data$div)
+colorFactor('Set1', wifi_data$div)
+mode(telecom_color)
+str(telecom_color)
+leaflet(wifi_data) %>%
+setView(lng = seoul_lonlat[1], lat = seoul_lonlat[2], zoom = 11) %>%
+addProviderTiles('Stamen.Toner') %>%
+addCircles(lng = ~lon, lat=~lat, popup = ~div, color = ~telecom_color(div))
+telecom_color(div)
+telecom_color = colorFactor('Set1', wifi_data$div)
+telecom_color(div)
+telecom_color(wifi_data$div)
+library(Kormaps)
+names(korpopmap1)
+names(korpopmap2)
+names(korpopmap3)
+View(korpopmap1)
+names(korpopmap1)
+names(korpopmap2)
+names(korpopmap3)
+names(korpopmap2)
+names(korpopmap3)
+names(korpopmap3)
+names(korpopmap4)
+names(korpopmap3)
+head(korpopmap1,1)
+head(korpopmap2,1)
+head(korpopmap3,1)
+head(korpopmap1,1)
+head(korpopmap2,1)
+head(korpopmap3,1)
+head(korpopmap3,1)
+head(korpopmap1,1)
+View(korpopmap1)
+crime <- read.csv('data.2017crime.csv')
+crime <- read.csv('data/2017crime.csv')
+head(crime)
+palette1<-colorNumeric(palette = 'Oranges', domain = crime$살인_발생)
+popup1 <- paste0(mymap$name,'<br> 살인 : ',crime$살인_발생, '건')
+map4<-leaflet(korpopmap2) %>% addTiles() %>% setView(lat=37.559957 ,lng=126.975302 , zoom=11)%>%
+addPolygons(stroke=FALSE,smoothFactor=0.2,fillOpacity=.5, popup=popup1, color=~palette1(crime$살인_발생), group='살인')
+map4
+crime
+palette1<-colorNumeric(palette = 'Oranges', domain = crime$살인_발생)
+popup1 <- paste0(mymap$name,'<br> 살인 : ',crime$살인_발생, '건')
+popup1 <- paste0(mymap$name,'<br> 살인 : ',crime$살인_발생, '건')
+korpopmap2@data <- korpopmap2@data[-26:-251,]
+korpopmap2@polygons<-korpopmap2@polygons[-26:-251]
+mymap <- korpopmap2@data
+popup1 <- paste0(mymap$name,'<br> 살인 : ',crime$살인_발생, '건')
+map4<-leaflet(korpopmap2) %>% addTiles() %>% setView(lat=37.559957 ,lng=126.975302 , zoom=11)%>%
+addPolygons(stroke=FALSE,smoothFactor=0.2,fillOpacity=.5, popup=popup1, color=~palette1(crime$살인_발생), group='살인')
+map4
+korpopmap2@data <- korpopmap2@data[-26:-251,]
+korpopmap2@data
+View(korpopmap2@data)
+View(mk)
+####14
+nc <- nchar(as.character(emp$ename))
+library(ggplot2)
+library(dplyr)
+####14
+nc <- nchar(as.character(emp$ename))
+emp %>% mutate(enameLength = nc)
+emp
+library(ggplot2)
+library(dplyr)
+emp
+emp <- read.csv('data/emp.csv')
+emp <- read.csv('data/emp.csv')
+emp
+emp$ename
+emp['ename']
+nc2<-as.character(emp['ename'])
+nc2
+nc2
+nc2
+emp['ename']
+as.character(emp['ename'])
+as.character(emp$ename)
+emp['ename']
+emp['ename']
+nc2
+View(emp)
+class(nc2)
+mode(nc2)
+typeof(nc2)
+is.vector(nc2)
+####14
+nc <- nchar(as.character(emp$ename))
+nc
+?table()
+table(emp$name)
+table(emp$ename)
+table(emp['ename'])
+table(emp)
+table(emp[,c(1,2)])
+mean(df$score)  # 평균 산출
+sum(df$score)   # 합계 산출
+df <- data.frame(sex = c("M", "F", NA, "M", "F"),
+score = c(5, 4, 3, 4, NA))
+# 결측치 확인하기
+is.na(df)         # 결측치 확인
+table(is.na(df))  # 결측치 빈도 출력
+# 결측치 확인하기
+is.na(df)         # 결측치 확인
+table(is.na(df))  # 결측치 빈도 출력
+# 변수별로 결측치 확인하기
+table(is.na(df$sex))    # sex 결측치 빈도 출력
+table(is.na(df$score))  # score 결측치 빈도 출력
+class(table)
+class(table(is.na(df)))
+mode(table(is.na(df)))
+typeof(table(is.na(df)))
+is.vector(table(is.na(df)))
+is.data.frame(table(is.na(df)))
+is.matrix(table(is.na(df)))
+is.tibble(table(is.na(df)))
+?table
+tibble
+# 변수별로 결측치 확인하기
+table(is.na(df$sex))    # sex 결측치 빈도 출력
+table(is.na(df$score))  # score 결측치 빈도 출력
+table(is.na(df))  # 결측치 빈도 출력
+# 결측치 확인하기
+is.na(df)         # 결측치 확인
+# 결측치 있는 행 제거하기
+library(dplyr) # dplyr 패키지 로드
+df %>% filter(is.na(score))   # score가 NA인 데이터만 출력
+df %>% filter(!is.na(score))  # score 결측치 제거
+# 결측치 제외한 데이터로 분석하기
+df_nomiss <- df %>% filter(!is.na(score))  # score 결측치 제거
+mean(df_nomiss$score)                      # score 평균 산출
+sum(df_nomiss$score)                       # score 합계 산출
+## 여러 변수 동시에 결측치 없는 데이터 추출하기
+#방법1 : filter  _  score, sex 결측치 제외
+df_nomiss <- df %>% filter(!is.na(score) & !is.na(sex))
+df_nomiss
+#방법2 : omit 결측치!! 한번에 제거하는 함수!
+df_nomiss2 <- na.omit(df)  # 모든 변수에 결측치 없는 데이터 추출
+#방법3 : 함수 아규먼트 이용 'na.rm =T'
+#        필요성)분석에 필요한 데이터까지 손실 될 가능성 유의
+#        함수의 결측치 제외 기능 이용하기 - na.rm = T!!
+mean(df$score, na.rm = T)  # 결측치 제외하고 평균 산출
+sum(df$score, na.rm = T)   # 결측치 제외하고 합계 산출
+# 결측치 생성
+setwd('data')
+exam <- read.csv("csv_exam.csv")            # 데이터 불러오기
+table(is.na(exam))
+exam[c(3, 8, 15), "math"] <- NA             # 3, 8, 15행의 math에 NA 할당
+'갑자기 궁금 NA 인덱싱?'
+exam[is.na(exam)==T]        # [1] NA NA NA
+which(is.na(exam)==T)       # [1] 43 48 55
+#평균 구하기
+exam %>% summarise(mean_math = mean(math))             # 평균 산출
+exam %>% summarise(mean_math = mean(math, na.rm = T))  # 결측치 제외하고 평균 산출
+# 다른 함수들에 적용
+exam %>% summarise(mean_math = mean(math, na.rm = T),      # 평균 산출
+sum_math = sum(math, na.rm = T),        # 합계 산출
+median_math = median(math, na.rm = T))  # 중앙값 산출
+mean(exam$math, na.rm = T)  # 결측치 제외하고 math 평균 산출
+boxplot(exam$math)
+summary(exam$math)
+# 평균으로 대체하기
+exam$math <- ifelse(is.na(exam$math), 55, exam$math)  # math가 NA면 55로 대체
+table(is.na(exam$math))                               # 결측치 빈도표 생성
+mean(exam$math)  # math 평균 산출
+# 이상치 포함된 데이터 생성 - sex 3, score 6
+outlier <- data.frame(sex = c(1, 2, 1, 3, 2, 1),  score = c(5, 4, 3, 4, 2, 6))
+# 이상치 확인하기
+table(outlier$sex)
+table(outlier$score)
+table(outlier$sex)
+table(outlier)
+a<-table(is.na(df))  # 결측치 빈도 출력
+a[1]
+is.list(a)
+names(a)
+col.names(a)
+col.name(a)
+row.names(a)
+a
+col.names(a)
+names(a)
+names(a[1])
+col.names(a)
+names(a[1])
+row.names(a)
+(today <- Sys.Date())
+today
+Sys.time
+Sys.time()
+tt<-Sys.time()
+class(tt)
+format(today, "%B")         #월 이름
+format(today, "%b")         #월 이름
+format(today2, '%H')         #시간
+format(today2, '%h')         #시간
+class(tt)
+format(tt, '%h')         #시간
+format(tt, '%H')         #시간
+format(tt, '%h')         #시간
+format(today2, '%S')         #초
+format(tt, '%H')         #시간
+format(20170812, "%Y년 %m월 %d일")   #Error
+format(today, "%Y년 %m월 %d일")
+format(20170812, "%Y년 %m월 %d일")   #Error
+format(today, "%Y년 %m월 %d일")
+class(format(today, "%Y년 %m월 %d일"))
+format(today, "%d일 %B %Y년")    #%B : 월을 출력하는데 월 이름으로 출력해라.는 함수  ==  %m월
+as.Date("07일 11월 2019년",format ="%d일 %B %Y년")
+Sys.timezone()
+t<-Sys.time()  #국제표준규정시
+ct<-as.POSIXct(t);
+lt<-as.POSIXlt(t)
+ct
+lt
+strptime(x2, "%Y%m%d")
+strptime(x2, "%Y%m%d")
+# 문자열을 날짜+시간형으로
+strptime(x1, "%Y-%m-%d %H:%M:%S")
+strptime(x2, '%Y')
+strptime(x2, '%Y')
+strptime(x2, '%H')
+# 문자열을 날짜+시간형으로
+strptime(x1, "%Y-%m-%d %H:%M:%S")
+x1
+tt
+today
+# 문자열을 날짜+시간형으로
+strtime(today)
+# 문자열을 날짜+시간형으로
+strtime(today, "%Y-%m-%d' )
+strptime(x1, "%Y-%m-%d %H:%M:%S")
+strptime('2019-08-21 14:10:30', "%Y-%m-%d %H:%M:%S")
+x2 <- "20180601"
+as.Date(x2, "%Y%m%d")
+strptime(x2, "%Y%m%d")
+strptime(x2, '%H')
+str(strptime(x2, "%Y%m%d"))
+#POSIXlt 날자,시간 처리객체
+#POSIXct :초 단위로 저장 ,POSIXlt :  날짜에 맞춰 리스트로 보관
+#DATE는 날자
+as.Date("2018/01/01 08:00:00") - as.Date("2018/01/01 05:00:00")   #년/월/일/ 형식이 안맞으면, format문자로 지정해줘야 한다.
+#초단위는 POSIX  _ 시간
+as.POSIXct("2018/01/01 08:00:00") - as.POSIXct("2018/01/01 05:00:00")
+as.POSIXlt("2018/01/01 08:00:00") - as.POSIXlt("2018/01/01 05:00:00")
+t<-Sys.time()  #국제표준규정시
+ct<-as.POSIXct(t);
+lt<-as.POSIXlt(t)
+str(ct)
+str(lt)
+unclass(ct) #1970-01-01을 기준으로 지난 초시간  unclass 객체를 푼다.
+unclass(lt)   # 따라서 단순 시간 차이가 아니라 날짜 / 월 등 뽑아서 쓸 일이 많으면 POSTLT형식이 좋다.
+lt$mon+1       #  만든사람 특이점; mon +1  ... 배열형식에 맞춰서
+lt$hour
+lt$year+1900
+as.POSIXct(1449894437,origin="1970-01-01")     #이런 1970년 기준 초시간 : 리눅스 시간 형태..
+as.POSIXlt(1449894437,origin="1970-01-01")
+as.POSIXlt("2019/11/05")$wday  #요일에 해당되는 숫자 0~6 : 일 ~토
+as.POSIXlt("2019/08/23")$wday
+as.POSIXlt("2019/08/24")$wday
+as.POSIXlt("2019/08/25")$wday
+as.POSIXlt("2019/08/26")$wday
+#즉석실습 - date_lab.R 로 제출한다.
+#(1) 내가 태어난 요일 출력하기
+me <- as.Date("1993/08/15")
+weekdays(me)
+#(2) 내가 태어난지 며칠이 되었는지 알아보기
+# Sys.Date - me
+as.Date('2019/11/05') - me
+#(3) 올해의 크리스마스 요일 2가지방법(요일명,숫자)
+#1
+ch <- as.Date('2019/12/25')
+weekdays(ch)
+lt <- as.POSIXlt(ch)
+unclass(lt)
+#3  ....근데 왜 타임좀 UTC??
+#(4) 2020년 1월 1일 어떤 요일
+new <- as.Date('2020/01/01')
+weekdays(new)
+#(5) 오늘은 xxxx년x월xx일x요일입니다 형식으로 출력
+cat( format(today, "%Y"),'년',format(today, '%B'),'월',format(today, '%d'),'일',
+weekdays(today),'요일 입니다.'
+)
+# (6) emp 데이터셋에서 직원들의 입사년도만 출력
+emp <- read.csv('emp.csv')
+View(emp)
+emp$hiredate
+as.character(emp$hiredate)[3]
+as.Date(emp$hiredate)
+format(as.Date(emp$hiredate),"%Y")
+##################    데이터 시각화    ###################
+######### 1.plot함수
+국어<- c(4,7,6,8,5,5,9,10,4,10)
+plot(국어)       #plot 원래 2개 데이터로 하는데 하나로 하면 x축은 index가 지정된다.
+plot(국어, type="o", col="blue")
+title(main="성적그래프", col.main="red", font.main=7)
+국어 <- c(4,7,6,8,5,5,9,10,4,10)
+수학 <- c(7,4,7,3,8,10,4,10,5,7)
+plot(국어, type="o", col="blue") #아규먼트_ 첫 번째 x축(디폴트 :인덱스), 두 번째 y축
+lines(수학, type="o", pch=16, lty=2, col="red")
+title(main="성적그래프", col.main="red", font.main=4)
+국어 <- c(4,7,6,8,5,5,9,10,4,10)
+par(mar=c(1,1,1,1), mfrow=c(4,2))  #상하좌우 마진  /  구간나누기행렬
+#x축제거  y축 제거
+plot(국어, type="p", col="blue", main="type = p", xaxt="n", yaxt="n")
+plot(국어, type="l", col="blue", main="type = l", xaxt="n", yaxt="n")
+plot(국어, type="b", col="blue", main="type = b", xaxt="n", yaxt="n")
+plot(국어, type="c", col="blue", main="type = c", xaxt="n", yaxt="n")
+plot(국어, type="o", col="blue", main="type = o", xaxt="n", yaxt="n")
+plot(국어, type="h", col="blue", main="type = h", xaxt="n", yaxt="n")
+plot(국어, type="s", col="blue", main="type = s", xaxt="n", yaxt="n")
+plot(국어, type="S", col="blue", main="type = S", xaxt="n", yaxt="n")
+국어 <- c(4,7,6,8,5,5,9,10,4,10);
+수학 <- c(7,4,7,3,8,10,4,10,5,7)
+par(mar=c(5,5,5,5), mfrow=c(1,1))
+plot(국어, type="o", col="blue", ylim=c(0,10), axes=FALSE, ann=FALSE)
+# y축 범위    축           축 라벨
+# x, y 축 추가하기
+axis(1, at=1:10, lab=c("01","02","03","04", "05","06","07","08","09","10")) # x축 추가
+axis(2, at=c(0,2,4,6,8,10))  # y축 추가
+#사이즈가 안 맞아서 글씨 다 안나와 _ 글씨 크기를 줄여서...해결..
+# 그래프 추가하고, 그래프에 박스 그리기
+lines(수학, type="o", pch=16, lty=5, col="red")
+box()   # 박스 그리기
+# 그래프 제목, 축의 제목, 범례 나타내기
+title(main="성적그래프", col.main="red", font.main=4)
+title(xlab="학번", col.lab=rgb(0,1,0))  #16진수로 표현해도 되고
+#rgb함수를 사용해도 된다.
+title(ylab="점수", col.lab=rgb(1,0,0))
+legend(8, 2, c("국어","수학"), cex=0.8, col=c("blue","red"), pch=c(21,16), lty=c(1,2))
+#legend(x축 위치,y축 위치, 레전드명, 크기, 칼라, 점 모양, 선 형태)
+(성적 <- read.table("성적.txt", header=TRUE));
+#read.csv 는 무조건 첫번째 행을 제목으로 읽으들인다  ,가 seperator.
+#read.table은 헤더 없이 데이터로 다 인식해버린다  공백이나 탭이 seperateor .
+plot(성적$학번, 성적$국어, main="성적그래프", xlab="학번", ylab="점수",  xlim=c(0, 11), ylim=c(0, 11))
+#학번별 국어성적을 그리겠다.
+ymax <- max(성적[3:5]) #성적 데이터 중에서 최대값을 찾는다(y 축의 크기 제한)
+ymax
+pcols<- c("red","blue","green")
+#png : 지금부터 출력되는 플롯은 플롯창이 아니라 성적.png라는 파일로 보내겠어 : 파일네임, 픽셀지정, 배경색
+png(filename="성적.png", height=400, width=700, bg="white") # 출력을 png파일로 설정
+'png말고도
+# 문자열을 날짜+시간형으로
+strtime(today, "%Y-%m-%d")
+strtime(today, "%Y-%m-%d")
+# 문자열을 날짜+시간형으로
+strtime(today, "%Y-%m-%d %H:%M:%S")
+strptime(x1, "%Y-%m-%d %H:%M:%S")
+strptime(x1, "%Y-%m-%d %H:%M:%S")
+# 문자열을 날짜+시간형으로
+strtime(today, "%Y-%m-%d %H:%M:%S")
+# 문자열을 날짜+시간형으로
+strtime(today, "%Y-%m-%d")
+# 문자열을 날짜+시간형으로
+strtime(today, "%Y-%m-%d")
+strptime(x1, "%Y-%m-%d %H:%M:%S")
+x2 <- "20180601"
+as.Date(x2, "%Y%m%d")
+x2
+strptime(x2, "%Y%m%d")
+strptime(x2, '%H')
+strptime(x2, '%S')
+class(strptime(x2, '%S'))
+as.Date(x2, '%m')
+as.Date(x2, "%Y%m%d")
+as.Date(x2, '%m')
+as.Date(x2, '%d')
+as.Date(x2, '%Y')
+as.Date(x2, '%M')
+as.Date(x2, '%n')
+as.Date(x2, '%m')
+as.Date(x2, '%m')
+x2 <- "20180601"
+as.Date(x2, "%Y%m%d")
+as.Date(x2, '%m')
+as.Date(x2, '%M')
+as.Date(x2, '%d')
+as.Date(x2, "%Y%m%d")
+as.Date(x2, '-%d')
+as.Date(x2, '%d')
+as.Date(x2, "%Y%m%d")
+strptime(x2, '%H')
+strptime(x2, '%%Y-%m-%d %H:%M')
+strptime(x2, '%%Y-%m-%d %H:%M')
+strptime(x2, '%%Y-%m-%d %H:%M:%S')
+strptime(x2, '%%Y-%m-%d %H:%M:%S')
+strptime(x1, '%%Y-%m-%d %H:%M:%S')
+x1 <- "2019-01-10 13:30:41"
+strptime(x1, '%%Y-%m-%d %H:%M:%S')
+strptime(x1, '%%Y-%m-%d %H:%M:%S')
+x1
+x1 <- "2019-01-10 13:30:41"
+strptime(x1, '%%Y-%m-%d %H:%M:%S')
+x1
+strptime(x1, '%Y-%m-%d %H:%M:%S')
+strptime(x1, '%Y-%m-%d %H:%M')
+strptime(x1, '%Y-%m-%d %H')
+strptime(x2, '%H')
+strptime(x2, '%d')
+strptime(x2, '%H')
+strptime(x1, '%H')
+lt
+is.list(li)
+is.list(lt)
+unclass(lt)   # 따라서 단순 시간 차이가 아니라 날짜 / 월 등 뽑아서 쓸 일이 많으면 POSTLT형식이 좋다.
+unlist(lt)
+ul<-unclass(lt)   # 따라서 단순 시간 차이가 아니라 날짜 / 월 등 뽑아서 쓸 일이 많으면 POSTLT형식이 좋다.
+ul[1]
+ct<-as.POSIXct(t);
+ct
+ul[1]
+lt
+ul[1]
+as.POSIXlt("2019/11/05")$wday
+#구간 5개 : 근데 프로그램 판단하에 달라질 수 이다.
+#break 디폴트 : 알고리즘에 따라 자동으로 계산
+hist(성적$국어, main="성적분포-국어", xlab="점수", breaks=5, col = "lightblue", border = "pink")
+hist(성적$국어, main="성적분포-국어", xlab="점수", ylab="도수", col(x = x)=rainbow(12), border = "pink")
+hist(성적$국어, main="성적분포-국어", xlab="점수", ylab="도수", col=rainbow(12), border = "pink")
+#구간 5개 : 근데 프로그램 판단하에 달라질 수 이다.
+#break 디폴트 : 알고리즘에 따라 자동으로 계산
+hist(성적$국어, main="성적분포-국어", xlab="점수", breaks=5, col = "lightblue", border = "pink")
+title(main="성적그래프", col.main="red", font.main=7)
+legend(8, 2, c("국어","수학"), cex=0.8, col=c("blue","red"), pch=c(21,16), lty=c(1,2))
+title(xlab="학번", col.lab=rgb(1,0,0))
+plot(성적$국어, type="o", col=pcols[1], ylim=c(0, ymax), axes=FALSE, ann=FALSE)
+axis(1, at=1:10, lab=c("01","02","03","04","05","06","07","08","09","10"))
+axis(2, at=c(0,2,4,6,8,10), lab=c(0,2,4,6,8,10))
+box()
+lines(성적$수학, type="o", pch=16, lty=2, col=pcols[2])
+plot(성적$국어, type="o", col=pcols[1], ylim=c(0, ymax), axes=FALSE, ann=FALSE)
+dev.off()
+plot(성적$국어, type="o", col=pcols[1], ylim=c(0, ymax), axes=FALSE, ann=FALSE)
+axis(1, at=1:10, lab=c("01","02","03","04","05","06","07","08","09","10"))
+axis(2, at=c(0,2,4,6,8,10), lab=c(0,2,4,6,8,10))
+box()
+lines(성적$수학, type="o", pch=16, lty=2, col=pcols[2])
+lines(성적$영어, type="o", pch=23, lty=3, col=pcols[3] )
+title(main="성적그래프", col.main="red", font.main=4)
+title(xlab="학번", col.lab=rgb(1,0,0))
+title(ylab="점수", col.lab=rgb(0,0,1))
+#교재 220-221
+ggplot(mtcars, aes(x=factor(cyl))) + geom_bar(aes(fill=factor(gear))) + coord_polar()
+ggplot(data=w, aes(x=year, y=weight)) + geom_bar(aes(fill=year), stat="identity") + geom_label(aes(label=weight), nudge_y=1.1)+coord_cartesian(ylim=c(60, 75))
+ggplot(data=w, aes(x=year, y=weight)) + geom_bar(aes(fill=year), stat="identity") + geom_label(aes(label=weight), nudge_y=3.1)+coord_cartesian(ylim=c(60, 75))

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>           
+<html>
+        
+<head>
+        <meta charset="utf-8">            
+        <title>맛보기 HTML</title>
+                                
+
+</head>
+<body>  
+        <h1>5시 4분 10초</h1>      <!-- 정적 컨텐츠-->
+        <hr>
+        <h1></h1>                        <!-- h1태그 2번쨰
+                                다 오면 웹브라우저에서 웹 안 자바스크립트                                           엔진에서 실행시키는 것이다. -->
+       <script>                                         
+             var h1dom = document.getElementsByTagName('h1')[1];
+             var d = new Date()
+             h1dom.textContent = d.getHours()+'시'+
+                                 d.getMinutes() + '분'+
+                                 d.getSeconds()+ '초';
+       </script>
+       
+                                 
+</body>
+</html>        
+
+

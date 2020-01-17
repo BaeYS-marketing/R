@@ -1,0 +1,41 @@
+
+<!--
+http---https s는  secure, 현재 넘어가고 있는 상태
+active X: 2000년도부터 2010까지 많이 쓰임 IE--html5(2006-2012)
+#2017까지 자바스크립트로 바뀜
+
+#utf-8
+#EUC-KR
+
+#블럭스타일<civ>
+#인라인스타일<span>
+
+
+1.크롤링하고자 하는 웹사이트의 문자열을 파악해야 한다(쿼리 문자열 포함)
+주소창 확인
+2. 웹페이지의 컨텐트가 어떤 문자셋으로 작성되었는지 파악
+<meta>
+3.추출하려는 컨텐츠를 포함하고 있는 태그를 찾는다
+개발자도구의 기능을 활용한다
+4.찾은태그의 CSS Selector,또는 Xpath를 판단한다
+5. Rvest라는 패키지를 사용한다.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>블럭스타일 태그</h1>
+<div style="background-color:yellow">테스트입니다1</div>
+<div>테스트입니다2</div>
+<div>테스트입니다3</div>
+<hr>
+<h1>인라인스타일 태그</h1>
+<span style="background-color:yellow">테스트입니다1</span>
+<span>테스트입니다2</span>
+<span>테스트입니다3</span>
+</body>
+</html>

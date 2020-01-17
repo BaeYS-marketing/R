@@ -1,0 +1,23 @@
+library(shiny)
+shinyUI(fluidPage(
+        titlePanel("Sliders"),
+        sidebarLayout(
+                sidebarPanel(
+                        sliderInput("aaa", "슬라이더 제목",
+                                    min=0, max=1000, value=500)
+                        
+                        #aaa라는 이름으로 서버한테 전달
+                        #사이드 패널은 데이터 전달 , 메인패널은 데이터 응답 받기
+                ),
+                mainPanel(
+                        h1("테스트"),
+                        tableOutput("values")    #서버 output변수 전달받아서 
+                        # textOutput("values")
+                )
+        )
+))
+
+
+
+#sliders를 통해서 서버와 클라이언트가 서로 상호작용하고 있다.
+
